@@ -1,11 +1,38 @@
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, Share, TouchableOpacity } from 'react-native';
 
 import * as ExpoScreenRecorder from 'expo-screen-recorder';
 
 export default function App() {
+  const onPressStart = async () => {
+    try {
+      await ExpoScreenRecorder.startRecording()
+    } catch (err) {
+      console.log("errorrr", err)
+    }
+  }
+  const onPressStop = async () => {
+    try {
+      const url = await ExpoScreenRecorder.stopRecording()
+      console.log("url!!", url)
+      Share.share({ url: url })
+    } catch (err) {
+      console.log("errorrr", err)
+    }
+  }
   return (
     <View style={styles.container}>
-      <Text>{ExpoScreenRecorder.hello()}</Text>
+      <TouchableOpacity 
+        style={{ margin: 20, padding: 20, backgroundColor: "black", borderRadius: 50 }} 
+        onPress={onPressStart}
+      >
+        <Text style={{ color: "white", fontSize: 16 }}>START RECORDING</Text>
+      </TouchableOpacity>
+      <TouchableOpacity 
+        style={{ margin: 20, padding: 20, backgroundColor: "black", borderRadius: 50 }} 
+        onPress={onPressStop}
+      >
+          <Text style={{ color: "white", fontSize: 16 }}>STOP RECORDING</Text>
+      </TouchableOpacity>
     </View>
   );
 }
