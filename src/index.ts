@@ -6,6 +6,11 @@ export async function startRecording(
   return ExpoScreenRecorderModule.startRecording(micEnabled);
 }
 
-export async function stopRecording(): Promise<string> {
-  return ExpoScreenRecorderModule.stopRecording();
+/**
+ * @param fileName
+ * The name of the output file (dont include the file extension, we append ".mov" to the fileName you provide)
+ * Default is a UUID.
+ * */
+export async function stopRecording(fileName?: string): Promise<string> {
+  return ExpoScreenRecorderModule.stopRecording(fileName);
 }

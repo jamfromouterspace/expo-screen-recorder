@@ -24,9 +24,9 @@ public class ExpoScreenRecorderModule: Module {
         })
     }
       
-      AsyncFunction("stopRecording") { () async throws -> String  in
+      AsyncFunction("stopRecording") { (fileName: String?) async throws -> String  in
         // Send an event to JavaScript.
-        return try await stopRecording()
+          return try await stopRecording(fileName: fileName)
       }
   }
 
@@ -36,8 +36,8 @@ public class ExpoScreenRecorderModule: Module {
         recorder.startRecording(handler: onComplete)
     }
     
-    func stopRecording() async throws -> String {
-        let name = UUID().uuidString + ".mov"
+    func stopRecording(fileName: String?) async throws -> String {
+        let name = (fileName ?? UUID().uuidString) + ".mov"
         let url = FileManager.default.temporaryDirectory.appendingPathComponent(name)
         let recorder = RPScreenRecorder.shared()
         
