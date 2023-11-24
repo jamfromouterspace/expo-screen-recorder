@@ -13,10 +13,11 @@ yarn add expo-screen-recorder
 import * as ScreenRecorder from "expo-screen-recorder"
 
 // anywhere in your code
-await ScreenRecorder.startRecording() // this includes the permission request, and no it can't be separated unfortunately, ReplayKit doesn't let you (as far as I know)
+const micEnabled = false
+await ScreenRecorder.startRecording(micEnabled) // this includes the permission request, and no it can't be separated unfortunately, ReplayKit doesn't let you (as far as I know)
                                       // if you want to separate it, create a function that starts and stops screen recording right after
                                       // also, once permissions accepted, they wont be asked for again ONLY for that session, or if it's been longer than 8minutes lol
-const url = await ScreenRecorder.stopRecording()
+const outputUrl = await ScreenRecorder.stopRecording() // you can also provide a file name: stopRecording(fileName)
 ```
 
 # Contributing
