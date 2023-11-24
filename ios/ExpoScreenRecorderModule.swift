@@ -12,6 +12,8 @@ public class ExpoScreenRecorderModule: Module {
         Name("ExpoScreenRecorder")
         
         AsyncFunction("startRecording") { (micEnabled: Bool, promise: Promise) in
+            // we cant enable camera until we implement a View for the camera preview
+            // (ideally we allow creating that view in React Native)
             startRecording(micEnabled: micEnabled, cameraEnabled: false, onComplete: { error in
                 if error != nil {
                     promise.reject(error!)
