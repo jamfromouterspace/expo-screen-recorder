@@ -364,7 +364,7 @@
 				);
 				OTHER_SWIFT_FLAGS = "$(inherited) -D EXPO_CONFIGURATION_DEBUG";
 				PRODUCT_BUNDLE_IDENTIFIER = expo.modules.screenrecorder.example;
-				PRODUCT_NAME = exposcreenrecorderexample;
+				PRODUCT_NAME = "exposcreenrecorderexample";
 				SWIFT_OBJC_BRIDGING_HEADER = "exposcreenrecorderexample/exposcreenrecorderexample-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -396,7 +396,7 @@
 				);
 				OTHER_SWIFT_FLAGS = "$(inherited) -D EXPO_CONFIGURATION_DEBUG";
 				PRODUCT_BUNDLE_IDENTIFIER = expo.modules.screenrecorder.example;
-				PRODUCT_NAME = exposcreenrecorderexample;
+				PRODUCT_NAME = "exposcreenrecorderexample";
 				SWIFT_OBJC_BRIDGING_HEADER = "exposcreenrecorderexample/exposcreenrecorderexample-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

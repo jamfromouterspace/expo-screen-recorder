@@ -5,7 +5,8 @@ import * as ExpoScreenRecorder from 'expo-screen-recorder';
 export default function App() {
   const onPressStart = async () => {
     try {
-      await ExpoScreenRecorder.startRecording()
+      const result = await ExpoScreenRecorder.startRecording()
+      console.log("result", result)
     } catch (err) {
       console.log("errorrr", err)
     }
