@@ -1,6 +1,6 @@
 {
   "name": "expo-screen-recorder",
-  "version": "0.1.2",
+  "version": "0.1.4",
   "description": "Programmatically start and stop screen recording",
   "main": "build/index.js",
   "types": "build/index.d.ts",

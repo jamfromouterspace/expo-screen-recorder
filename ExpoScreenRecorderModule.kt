@@ -154,7 +154,7 @@ class ExpoScreenRecorderModule : Module(), HBRecorderListener {
         startRecordingPromise = null
       } else if (requestCode == SCREEN_RECORD_REQUEST_CODE && resultCode == Activity.RESULT_OK) {
         hbRecorder!!.startScreenRecording(data, resultCode);
-        startRecordingPromise?.resolve()
+        startRecordingPromise?.resolve("")
         startRecordingPromise = null
       } else {
         startRecordingPromise?.reject(CodedException("Screen recording permission denied"))
