@@ -28,7 +28,9 @@
   "author": "Jamiel Rahi <app.gildew@gmail.com> (https://github.com/closetothe)",
   "license": "MIT",
   "homepage": "https://github.com/closetothe/expo-screen-recorder#readme",
-  "dependencies": {},
+  "dependencies": {
+    "expo": "49"
+  },
   "devDependencies": {
     "@types/react": "^18.0.25",
     "expo-module-scripts": "^3.5.2",
