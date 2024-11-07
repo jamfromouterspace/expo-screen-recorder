@@ -1,6 +1,6 @@
 {
   "name": "expo-screen-recorder",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "Programmatically start and stop screen recording",
   "main": "build/index.js",
   "types": "build/index.d.ts",
@@ -29,12 +29,12 @@
   "license": "MIT",
   "homepage": "https://github.com/closetothe/expo-screen-recorder#readme",
   "dependencies": {
-    "expo": "49"
+    "expo": "^51.0.38"
   },
   "devDependencies": {
-    "@types/react": "^18.0.25",
+    "@types/react": "^18.3.12",
     "expo-module-scripts": "^3.5.2",
-    "expo-modules-core": "^1.12.19"
+    "expo-modules-core": "^1.12.26"
   },
   "peerDependencies": {
     "expo": "*",
